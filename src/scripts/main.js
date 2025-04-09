@@ -20,14 +20,12 @@ function sortList(list, itemForSort) {
 sortList(employeesList, employeesCollection);
 
 function getEmployees(list) {
-  list.map((employee) => {
-    return {
-      name: employee.innerText,
-      position: employee.dataset.position,
-      age: employee.dataset.age,
-      salary: employee.dataset.salary,
-    };
-  });
+  return list.map((employee) => ({
+    name: employee.innerText,
+    position: employee.dataset.position,
+    age: employee.dataset.age,
+    salary: employee.dataset.salary,
+  }));
 }
 
-getEmployees(employeesList);
+getEmployees(employeesList)
